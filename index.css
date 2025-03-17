@@ -1,0 +1,197 @@
+body {
+    background-color: #F5E1C0; 
+    color: #4B2E17; 
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+h1 {
+    color: #f6ca08;
+    font-size: 50px;
+    margin-top: 0;
+    padding: 20px;
+    text-align: center;
+    background: url(img/fondo2.jpeg) no-repeat center center;
+    background-size: cover; 
+    background-position: center; 
+    height: 50vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideIn 2s ease-out, colorChange 4s infinite alternate;
+}
+
+
+@keyframes slideIn {
+    0% { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes colorChange {
+    0% { color: #f6ca08; }
+    100% { color: #f5e1c0; }
+}
+
+.head {
+    background-color: #8B5A2B;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: headSlide 1.5s ease-out, shadowPulse 2s infinite alternate;
+}
+
+@keyframes headSlide {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes shadowPulse {
+    0% { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+    100% { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); }
+}
+
+.logo a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    animation: scaleUp 1.5s ease-in-out;
+}
+
+@keyframes scaleUp {
+    0% { transform: scale(0.8); }
+    100% { transform: scale(1); }
+}
+
+.logo a:hover {
+    transform: scale(1.1);
+    color: #f6ca08;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    animation: fadeInRight 2s ease-out;
+}
+
+@keyframes fadeInRight {
+    0% { opacity: 0; transform: translateX(20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: #f6ca08;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 2s ease-out;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.title {
+    color: #5A3E1B;
+    font-size: 28px;
+    animation: textAppear 2s ease-in-out;
+    text-align: center;
+}
+
+@keyframes textAppear {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    opacity: 0;
+    animation: fadeInText 3s forwards;
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.btn-home {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.btn {
+    background-color: #8B5A2B;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: popIn 2s ease-out;
+}
+
+@keyframes popIn {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.btn:hover {
+    background-color: #5A3E1B;
+    transform: scale(1.05);
+}
+.pie {
+    background-color: #8B5E3C; 
+    color: white; 
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    list-style: none; 
+}
+
+.pie li {
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.pie img {
+    height: 150px;
+    border-radius:20px; 
+    margin-top: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); 
+}
+
+.pie p {
+    margin: 5px 0;
+}
